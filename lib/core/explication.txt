@@ -1,0 +1,11 @@
+UTILS: pin_helper.dart — hash le PIN en SHA-256, 
+sauvegarde/lit/efface la session avec shared_preferences. 
+C'est lui que main.dart appelle au démarrage pour savoir si l'utilisateur est connecté.
+
+
+DATABASE: db_helper.dart — crée la base SQLite au premier lancement, 
+gère les tables users et diagnostics. Singleton, donc un seul DbHelper.instance partout.
+
+
+MODELS: user_model.dart et diagnostic_model.dart — 
+les modèles de données avec toMap() pour écrire en base et fromMap() pour lire.
